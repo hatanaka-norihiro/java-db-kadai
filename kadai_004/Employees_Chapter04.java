@@ -1,27 +1,26 @@
-package text.section_04;
+package kadai_004;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class DbTable_1 {
+public class Employees_Chapter04 {
 
 	public static void main(String[] args) {
-
 	        Connection con = null;
-        	Statement statement = null;
+	        Statement statement = null;
 
 	        try {
-        	    // データベースに接続
-            		con = DriverManager.getConnection(
+	            // データベースに接続
+	            con = DriverManager.getConnection(
 	                "jdbc:mysql://localhost/challenge_java",
-        	        "root",
-                	"hata1012"
+	                "root",
+	                "hata1012"
 	            );
-
-        	    System.out.println("データベース接続成功");
-
+	
+	            System.out.println("データベース接続成功");
+	
 	            // SQLクエリを準備
 	            statement = con.createStatement();
 	            String sql = """
